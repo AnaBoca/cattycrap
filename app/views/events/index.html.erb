@@ -1,0 +1,9 @@
+<% @events.each do |event| %>
+  <div>
+    <h1><%= event.vaccine_type %></h1>
+    <i><%= event.date %></i>
+    <p><%= event.notes %></p>
+  </div>
+
+  <hr />
+<% end %>
