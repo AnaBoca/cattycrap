@@ -31,3 +31,20 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 26px;
   font-weight: 800;
 }
+
+.pagination {
+  font-family: 'Righteous', cursive;
+}
+
+.pagination > li > a {
+  color: #EB23E5;
+}
+
+.pagination > li > a:hover {
+  color: black;
+}
+
+.page-item.active .page-link {
+  background-color: #EB23E5;
+  border-color: black;
+}

@@ -5,3 +5,7 @@
     <p><%= event.notes %></p>
   </div>
 <% end %>
+
+<div class="pagination m-5 float-right">
+  <%= will_paginate @events, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, previous_label: h("<"), next_label: h(">"), inner_window: 1, outer_window: 0 %>
+</div>
