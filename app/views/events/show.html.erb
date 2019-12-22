@@ -2,4 +2,8 @@
   <h1 class="mb-2"><%= @event.vaccine_type %></h1>
   <p class="mb-2 font-italic"><%= @event.date %></p>
   <p><%= @event.notes %></p>
+  <div class="float-right">
+    <%= link_to 'Edit', edit_event_path(@event), class: 'btn' %>
+  </div>
+  <div class="clearfix"></div>
 </div>

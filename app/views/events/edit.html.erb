@@ -1,11 +1,11 @@
 <div class="booyah-box col-10 offset-1 my-3 py-3">
-  <h1>Enter Cat Vaccine Event Details</h1>
+  <h1>Edit Cat Vaccine Event Details</h1>
   <br />
   <%= simple_form_for @event do |f| %>
     <%= f.input :vaccine_type, collection: ["Rabies", "FVRCP"] %>
     <%= f.input :date, order: [:month, :day, :year], label: 'Vaccine Appointment Date' %>
     <%= f.input :notes %>
     <br />
-    <%= f.submit 'Create', class: 'btn' %>
+    <%= f.submit 'Update', class: 'btn' %>
   <% end %>
 </div>
