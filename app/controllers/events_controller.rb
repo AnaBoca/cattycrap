@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
 
   def index
     @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
@@ -20,10 +20,18 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
+
+    if @event.user != current_user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
   end
 
   def update
     @event = Event.find(params[:id])
+    if @event.user != current_user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
+
     @event.update_attributes(event_params)
     redirect_to root_path
   end
