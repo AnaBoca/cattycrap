@@ -14,6 +14,10 @@ class EventsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
   private
 
   def event_params
