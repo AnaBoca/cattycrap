@@ -3,6 +3,10 @@
     <h1 class="mb-2"><%= event.vaccine_type %></h1>
     <p class="mb-2 font-italic"><%= event.date %></p>
     <p><%= event.notes %></p>
+
+    <% if event.user.present? %>
+      <small><%= event.user.email %></small>
+    <% end %>
   </div>
 <% end %>
 
