@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
@@ -38,6 +38,10 @@ class EventsController < ApplicationController
 
   def destroy
     @event = Event.find(params[:id])
+    if @event.user != current_user
+      return render plain: 'Not Allowed', status: :forbidden
+    end
+    
     @event.destroy
     redirect_to root_path
   end
