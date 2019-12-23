@@ -10,8 +10,12 @@ class EventsController < ApplicationController
   end
 
   def create
-    current_user.events.create(event_params)
-    redirect_to root_path
+    @event = current_user.events.create(event_params)
+    if @event.valid?
+      redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show
@@ -28,12 +32,17 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
+    
     if @event.user != current_user
       return render plain: 'Not Allowed', status: :forbidden
     end
 
     @event.update_attributes(event_params)
-    redirect_to root_path
+    if @event.valid?
+      redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -41,7 +50,7 @@ class EventsController < ApplicationController
     if @event.user != current_user
       return render plain: 'Not Allowed', status: :forbidden
     end
-    
+
     @event.destroy
     redirect_to root_path
   end
