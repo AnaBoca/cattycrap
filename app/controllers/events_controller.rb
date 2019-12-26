@@ -22,10 +22,8 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @options = {
       type: 'cat',
-      limit: 1
     }
-    @cat = $petfinder.search_animals(@options).first
-    puts @cat.inspect
+    @cat = $petfinder.search_animals(@options)[:animals].sample
   end
 
   def edit

@@ -1,3 +1,6 @@
+<p><%= @cat.name %></p>
+<%= image_tag(@cat.photos.first.medium) if @cat.photos.present? %>
+
 <div class="booyah-box col-10 offset-1 my-3 py-3">
   <h1 class="mb-2"><%= @event.vaccine_type %></h1>
   <p class="mb-2 font-italic"><%= @event.date %></p>
