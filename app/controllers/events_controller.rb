@@ -20,7 +20,12 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    pets = petfinder.find_pets('dog')
+    @options = {
+      type: 'cat',
+      limit: 1
+    }
+    @cat = $petfinder.search_animals(@options).first
+    puts @cat.inspect
   end
 
   def edit

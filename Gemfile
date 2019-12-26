@@ -83,6 +83,6 @@ gem "font-awesome-rails"
 
 gem 'devise'
 
-gem 'petfinder'
-
 gem "figaro"
+
+gem 'petfinder_V2'
