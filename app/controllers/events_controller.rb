@@ -24,6 +24,7 @@ class EventsController < ApplicationController
       type: 'cat',
     }
     @cat = $petfinder.search_animals(@options)[:animals].sample
+    puts @cat.inspect
   end
 
   def edit

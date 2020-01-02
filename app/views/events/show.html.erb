@@ -1,5 +1,8 @@
-<p><%= @cat.name %></p>
-<%= image_tag(@cat.photos.first.medium) if @cat.photos.present? %>
+<div class="booyah-box col-10 offset-1 my-3 py-3">
+  <h1 class="mb-2"><%= @cat.name %></h1>
+  <%= image_tag(@cat.photos.first.medium, class: 'img-thumbnail mx-auto d-block') if @cat.photos.present? %>
+  <div class="clearfix"></div>
+</div>
 
 <div class="booyah-box col-10 offset-1 my-3 py-3">
   <h1 class="mb-2"><%= @event.vaccine_type %></h1>
