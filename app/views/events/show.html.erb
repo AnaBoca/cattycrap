@@ -1,10 +1,4 @@
 <div class="booyah-box col-10 offset-1 my-3 py-3">
-  <h1 class="mb-2"><%= @cat.name %></h1>
-  <%= image_tag(@cat.photos.first.medium, class: 'img-thumbnail mx-auto d-block') if @cat.photos.present? %>
-  <div class="clearfix"></div>
-</div>
-
-<div class="booyah-box col-10 offset-1 my-3 py-3">
   <h1 class="mb-2"><%= @event.vaccine_type %></h1>
   <p class="mb-2 font-italic"><%= @event.date %></p>
   <p><%= @event.notes %></p>
@@ -15,4 +9,46 @@
     <% end %>
   </div>
   <div class="clearfix"></div>
+</div>
+
+<div class="booyah-box col-10 offset-1 my-3 py-3">
+
+  <h1 class="mt-3">Interested in adopting more cat friends?</h1>
+  <h2 class="mb-5">Find more information about the cat listed below on <%= link_to("Petfinder.com.", "https://www.petfinder.com/", target: "_blank") %></h2>
+  
+
+  <% if @cat.name.present? %>
+    <h3 class="mt-3">Name</h3>
+    <p><%= @cat.name %></p>
+  <% end %>
+  
+  <% if @cat.photos.present? %>
+    <h3 class="mt-3">Photo</h3>
+    <%= image_tag(@cat.photos.first.medium, class: 'img-thumbnail mx-auto d-block') %>
+  <% end %>
+
+  <% if @cat.age.present? %>
+    <h3 class="mt-3">Age</h3>
+    <p><%= @cat.age %></p>
+  <% end %>
+
+  <% if @cat.gender.present? %>
+    <h3 class="mt-3">Gender</h3>
+    <p><%= @cat.gender %></p>
+  <% end %>
+
+  <% if @cat.size.present? %>
+    <h3 class="mt-3">Size</h3>
+    <p><%= @cat.size %></p>
+  <% end %>
+
+  <% if @cat.id.present? %>
+    <div class="float-right font-italic">
+      <p class="m-0 p-0">Unique Petfinder ID</p>
+      <p class="m-0 p-0"><%= @cat.id %></p>
+    </div>
+  <% end %>
+
+  <div class="clearfix"></div>
+
 </div>
