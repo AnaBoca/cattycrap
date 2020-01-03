@@ -77,11 +77,6 @@ a:hover {
   text-decoration: none;
 }
 
-.carousel-caption {
-  color: #EB23E5;
-  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-}
-
 .carousel-control-prev, 
 .carousel-control-next {
   visibility: hidden;
@@ -95,6 +90,18 @@ a:hover {
   background-color: #EB23E5;
 }
 
-#carouselExampleIndicators {
+.carousel {
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.carousel-caption {
+  color: #EB23E5;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  left: 0;
 }
