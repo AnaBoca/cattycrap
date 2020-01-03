@@ -77,3 +77,24 @@ a:hover {
   text-decoration: none;
 }
 
+.carousel-caption {
+  color: #EB23E5;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+  visibility: hidden;
+}
+
+.carousel-indicators li {
+  background-color: #e7e7e7;
+}
+
+.carousel-indicators .active {
+  background-color: #EB23E5;
+}
+
+#carouselExampleIndicators {
+  box-shadow: 0px 1px 3px #2a2a2a;
+}
