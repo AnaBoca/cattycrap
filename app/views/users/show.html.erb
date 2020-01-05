@@ -1,1 +1,37 @@
-<h1>User Dashboard</h1>
+<div class="booyah-box container my-3 py-3">
+  
+  <div class="row">
+    
+    <div class="col-md-4">
+      <%= image_tag('user.png', class: 'img-fluid mx-auto d-block') %>
+    </div>
+
+    <div class="col-md-8 my-auto">  
+      <h1 class="mb-4"><%= @user.email %></h1>
+      <h3>Catty Crap Cat Parent Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+      <h3>Total Vaccine Appointments: <%= @user.events.count %></h4>
+    </div>
+
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+<div class="clearfix"></div>
+
+<h2 class="text-center">Vaccine Appointments</h2>
+
+<% @user.events.each do |event| %>
+  <div class="booyah-box col-10 offset-1 my-3 py-3">
+    <h1 class="mb-2"><%= link_to event.vaccine_type, event_path(event) %></h1><br />
+    <p class="mb-2 font-italic"><%= event.date.strftime("%m-%d-%Y") %></p>
+    <p><%= event.notes %></p>
+
+    <% if event.user.present? %>
+      <small><%= event.user.email %></small>
+    <% end %>
+  </div>
+<% end %>
+
+<div class="pagination m-5 float-right">
+  <%= will_paginate @events, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, previous_label: h("<"), next_label: h(">"), inner_window: 1, outer_window: 0 %>
+</div>

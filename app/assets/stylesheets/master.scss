@@ -67,7 +67,6 @@ a {
 }
 
 a:visited {
-  color: #32CD32;
   text-decoration: none;
 }
 
@@ -104,4 +103,10 @@ a:hover {
   width: 100%;
   position: absolute;
   left: 0;
+}
+
+@media (max-width:800px) {
+  .carouselContainer {
+    display:none !important;
+  }
 }
