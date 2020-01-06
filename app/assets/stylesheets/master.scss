@@ -105,6 +105,25 @@ a:hover {
   left: 0;
 }
 
+.figures {
+  box-shadow: 10px 10px #fff;
+  background: #fff;
+}
+
+.index-text {
+  font-size: 1.5rem;
+}
+
+.our-mission {
+  color: white;
+  background: #000;
+}
+
+.about-us {
+  color: white;
+  background: #556271;
+}
+
 @media (max-width:800px) {
   .carouselContainer {
     display:none !important;
