@@ -43,7 +43,7 @@ class EventsController < ApplicationController
 
     @event.update_attributes(event_params)
     if @event.valid?
-      redirect_to root_path
+      redirect_to user_path(current_user)
     else
       render :new, status: :unprocessable_entity
     end
@@ -56,7 +56,7 @@ class EventsController < ApplicationController
     end
 
     @event.destroy
-    redirect_to root_path
+    redirect_to user_path(current_user)
   end
 
   private
