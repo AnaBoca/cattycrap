@@ -2,7 +2,6 @@ class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
   end
 
   def new

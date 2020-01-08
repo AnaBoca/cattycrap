@@ -4,7 +4,7 @@
   <%= simple_form_for @event do |f| %>
     <%= f.input :vaccine_type, collection: ["Rabies", "FVRCP"] %>
     <%= f.input :date, order: [:month, :day, :year], label: 'Vaccine Appointment Date' %>
-    <%= f.input :notes %>
+    <%= f.input :notes, placeholder: "Example Input:\nFor FLUFFY. 2-years-of-age Rabies vaccine. Will need to use kitty Fear Free kit prior to appt." %>
     <br />
     <%= f.submit 'Create', class: 'btn btn-pink' %>
   <% end %>
