@@ -19,10 +19,10 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @options = {
+    @cat_options = {
       type: 'cat',
     }
-    @cat = $petfinder.search_animals(@options)[:animals].sample
+    @cat = $petfinder.search_animals(@cat_options)[:animals].sample
   end
 
   def edit
