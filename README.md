@@ -5,14 +5,14 @@ A Ruby on Rails application that uses a PostgreSQL database to store and track v
 
 ## 🗐 Home Page
 
-![App Screenshot One](https://github.com/AnaBoca/splurty/blob/master/app/assets/images/screenshot1.jpg)
+![Home Page Screenshot](https://github.com/AnaBoca/cattycrap/blob/master/app/assets/images/home.jpg)
 
 
-## 🗐 Contribute Modal
+## 🗐 Dashboard Page
 
-![App Screenshot Two](https://github.com/AnaBoca/splurty/blob/master/app/assets/images/screenshot2.jpg)
+![Dashbaord Page Screenshot](https://github.com/AnaBoca/cattycrap/blob/master/app/assets/images/dashboard.jpg)
 
 
-## 🗐 About Page
+## 🗐 Event Detail Page
 
-![App Screenshot Two](https://github.com/AnaBoca/splurty/blob/master/app/assets/images/screenshot3.jpg)
+!Event Detail Page Screenshot](https://github.com/AnaBoca/cattycrap/blob/master/app/assets/images/event_show.jpg)
