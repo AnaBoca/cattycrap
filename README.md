@@ -1,24 +1,18 @@
-# README
+# CATTY CRAP Cat Health App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails application that uses a PostgreSQL database to store and track vaccine appointments for cats.
 
-Things you may want to cover:
 
-* Ruby version
+## 🗐 Home Page
 
-* System dependencies
+![App Screenshot One](https://github.com/AnaBoca/splurty/blob/master/app/assets/images/screenshot1.jpg)
 
-* Configuration
 
-* Database creation
+## 🗐 Contribute Modal
 
-* Database initialization
+![App Screenshot Two](https://github.com/AnaBoca/splurty/blob/master/app/assets/images/screenshot2.jpg)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## 🗐 About Page
 
-* Deployment instructions
-
-* ...test test test
+![App Screenshot Two](https://github.com/AnaBoca/splurty/blob/master/app/assets/images/screenshot3.jpg)
