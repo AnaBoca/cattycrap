@@ -10,7 +10,7 @@ RSpec.describe EventsController, type: :controller do
   end
 
   describe "events#edit action" do
-    it "shouldn't let unauthenticated users edit and event" do
+    it "shouldn't let unauthenticated users edit an event" do
       event = FactoryBot.create(:event)
       get :edit, params: { id: event.id }
       expect(response).to redirect_to new_user_session_path
