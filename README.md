@@ -15,4 +15,4 @@ A Ruby on Rails application that uses a PostgreSQL database to store and track v
 
 ## 🗐 Event Detail Page
 
-!Event Detail Page Screenshot](https://github.com/AnaBoca/cattycrap/blob/master/app/assets/images/event_show.jpg)
+![Event Detail Page Screenshot](https://github.com/AnaBoca/cattycrap/blob/master/app/assets/images/event_show.jpg)
