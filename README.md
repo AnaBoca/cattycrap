@@ -1,6 +1,7 @@
 # CATTY CRAP Cat Health App
 
-A Ruby on Rails application that uses a PostgreSQL database to store and track vaccine appointments for cats. Developed as Solo Project for University of Arizona Online Coding Bootcamp. 
+A Ruby on Rails application that stores and tracks vaccine appointments for cats and uses the Petfinder API.
+Developed as capstone Solo Project for University of Arizona Online Coding Bootcamp. 
 
 #### Satifies the following Solo Project Technical Requirements: 
 * Ruby on Rails Application
